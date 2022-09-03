@@ -12,13 +12,13 @@ wget -O agent.tar.gz ${AGENTURL}
 tar zxvf agent.tar.gz
 chmod -R 777 .
 echo "extracted"
-./bin/installdependencies.sh
+/home/tfmadmin/bin/installdependencies.sh
 echo "dependencies installed"
 sudo -u tfmadmin ./config.sh --unattended --url $1 --auth pat --token $2 --pool $3 --agent $4 --acceptTeeEula --work ./_work --runAsService
 echo "configuration done"
-./svc.sh install
+/home/tfmadmin/agent/svc.sh install
 echo "service installed"
-./svc.sh start
+/home/tfmadmin/agent/svc.sh start
 echo "service started"
 echo "config done"
 exit 0
