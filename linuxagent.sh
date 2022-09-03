@@ -1,7 +1,7 @@
 #!/bin/sh
 echo $@
 echo "start"
-cd /home/ftmadmin
+cd /home/tfmadmin
 mkdir agent
 cd agent
 
