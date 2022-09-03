@@ -5,9 +5,7 @@ cd /home/ftmadmin
 mkdir agent
 cd agent
 
-
-AGENTRELEASE="$(curl -s https://api.github.com/repos/Microsoft/azure-pipelines-agent/releases/latest | grep -oP '"tag_name": "v\K(.*)(?=")')"
-AGENTURL="https://vstsagentpackage.azureedge.net/agent/${AGENTRELEASE}/vsts-agent-linux-x64-${AGENTRELEASE}.tar.gz"
+AGENTURL="https://vstsagentpackage.azureedge.net/agent/2.209.0/vsts-agent-linux-x64-2.209.0.tar.gz"
 echo "Release "${AGENTRELEASE}" appears to be latest" 
 echo "Downloading..."
 wget -O agent.tar.gz ${AGENTURL} 
